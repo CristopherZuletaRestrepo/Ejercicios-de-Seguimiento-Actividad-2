@@ -16,24 +16,20 @@ public class Main {
         System.out.print("Ingrese el tipo de cuenta (AHORROS, CORRIENTE): ");
         String tipoCuentaLeida=lector.next();
         TiposCuenta TipoCuenta=TiposCuenta.valueOf(tipoCuentaLeida.toUpperCase());
-        System.out.print("Ingrese el porcentaje de interes: ");
-        double porcentajeInteres=lector.nextDouble();
         
         
         /*constructor use*/    
-        CuentaBancaria cuenta1 = new CuentaBancaria(
+        CuentaBancaria cuenta = new CuentaBancaria(
                 nombresTitular,
                 apellidosTitular,
                 numeroCuenta,
-                TipoCuenta,
-                porcentajeInteres
+                TipoCuenta
         );
         /*calling methods*/
-        cuenta1.mostrarCuentaBancaria();
-        cuenta1.mostrarSaldoCuenta();
-        cuenta1.consignarSaldo(200000);
-        cuenta1.consignarSaldo(300000);
-        cuenta1.retirarSaldo(400000);
-        cuenta1.interesAplicado();
+        cuenta.mostrarCuentaBancaria();
+        cuenta.mostrarSaldoCuenta();
+        cuenta.consignarSaldo(200000);
+        cuenta.consignarSaldo(300000);
+        cuenta.retirarSaldo(400000);
     }
 }

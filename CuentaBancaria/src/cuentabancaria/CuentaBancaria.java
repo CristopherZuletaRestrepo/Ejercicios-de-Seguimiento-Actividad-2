@@ -14,19 +14,17 @@ public class CuentaBancaria {
     }
     TiposCuenta tipoCuenta;
     double saldo;
-    double porcentajeInteres;
     
     
     
     
     /*constructor--------------*/
-    CuentaBancaria(String nombresTitular,String apellidosTitular,int numeroCuenta,TiposCuenta tipoCuenta, double porcentajeInteres){
+    CuentaBancaria(String nombresTitular,String apellidosTitular,int numeroCuenta,TiposCuenta tipoCuenta){
         this.nombresTitular = nombresTitular;
         this.apellidosTitular = apellidosTitular;
         this.numeroCuenta = numeroCuenta;
         this.tipoCuenta = tipoCuenta;
         saldo=0;
-        this.porcentajeInteres=porcentajeInteres;
              
      
     }
@@ -36,11 +34,10 @@ public class CuentaBancaria {
         System.out.println("Apellidos del titular: "+apellidosTitular);
         System.out.println("Número de cuenta: " +numeroCuenta);
         System.out.println("Tipo de cuenta: "+tipoCuenta);
-        System.out.println("Saldo: $"+saldo);
     }
     
     public void mostrarSaldoCuenta(){
-        System.out.println("Saldo actual: $"+saldo);
+        System.out.println("Saldo: $"+saldo);
     }
     
     public boolean consignarSaldo(double valorAConsignar){
@@ -65,10 +62,6 @@ public class CuentaBancaria {
         }
     }
     
-    public void interesAplicado(){
-        saldo+=saldo*(porcentajeInteres/100);
-        System.out.println("Más el porcentaje de interés ("+porcentajeInteres+"%). Su nuevo saldo es de: "+saldo);
-    }
         
                   
 }
